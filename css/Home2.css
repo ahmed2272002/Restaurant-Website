@@ -1,0 +1,1093 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* font-family: "Playwrite GB S", cursive; */
+}
+
+html , body{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+    background-color: white;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 98, 0);
+}
+
+nav{
+    background: rgb(255, 98, 0);
+    padding: 10px 30px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+nav .up{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.up .logo{
+    width: auto;
+}
+
+nav .logo a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-family: "Playwrite GB S", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+}
+
+
+.search{
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.search input{
+    padding: 4px 6px;
+    outline: none;
+    border-radius: 10px 0 0 10px;
+    border: none;
+    font-size: 12px;
+    font-family: 'Playwrite GB S';
+    text-transform: capitalize;
+    width: 80%;
+}
+
+.search button{
+    padding: calc(4px - 1.2px);
+    width: 20%;
+    cursor: pointer;
+    color: white;
+    border-radius: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: rgb(255, 98, 0);
+    border: 2px solid white;
+    font-weight: 800;
+}
+
+.search button:hover{
+    background-color: rgb(222, 85, 0);
+}
+
+.up .makeaccount{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 15px;
+    padding-right: 5px;
+    width: 45%;
+}
+
+
+nav .up .makeaccount .myaccount{
+    margin: 0 20px;
+}
+
+nav .up .makeaccount .myaccount a{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+}
+
+nav .up .makeaccount .myaccount a i{
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav .up .makeaccount .myaccount a:hover i{
+    color: white;
+}
+
+nav .up .makeaccount .myaccount a h3{
+    font-family: 'Playwrite GB S';
+    font-size: 13px;
+    margin-top: 3px;
+    font-weight: 800;
+    opacity: 1;
+    color: black;
+    transition: 0.3s;
+}
+
+nav .up .makeaccount .myaccount a:hover h3{
+    color: white;
+    opacity: 1;
+}
+
+nav .up .makeaccount .cart{
+    position: relative;
+}
+
+nav .up .makeaccount .cart i{
+    color: white;
+    cursor: pointer;
+}
+
+nav .up .makeaccount .cart span{
+    position: absolute;
+    top: -7px;
+    left: 70%;
+    color: white;
+    font-size: 9px;
+    font-weight: 800;
+    font-family: "Playwrite GB S", cursive;
+    background-color: black;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+nav .menu{
+    display: none;
+}
+
+
+/* section */
+
+section{
+    padding: 30px 60px;
+}
+
+.categories{
+    display: flex;
+    flex-direction: column;
+    column-gap: 15px;
+    margin-bottom: 20px;
+}
+
+.category{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.category h2{
+    font-family: "Playwrite GB S", cursive;
+}
+
+.category a{
+    text-decoration: none;
+    color: rgb(255, 98, 0);
+    font-size: 17px;
+    position: relative;
+}
+
+.category a::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    z-index: -1;
+    background-color: rgb(255, 98, 0);
+    transition: 0.3s;
+}
+
+.category a:hover::after{
+    width: 100%;
+}
+
+.categories-body{
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
+
+.categories-body .cate{
+    width: fit-content;
+    position: relative;
+    height: 84px;
+    border-radius: 60px;
+}
+
+.categories-body .cate a{
+    height: 84px;
+    display: block;
+}
+
+.categories-body .cate a img{
+    width: 135px;
+    border-radius: 60px;
+    height: 85px;
+}
+
+.categories-body .cate a .black{
+    display: flex;
+    position: absolute;
+    background-color: #000000;
+    opacity: 0.3;
+    width: 100%;
+    height: 84px;
+    top: 0px;
+    left: 0;
+    border-radius: 60px;
+}
+
+.categories-body .cate a p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 16px;
+    font-family: monospace;
+    transition: 0.3s;
+}
+
+.categories-body .cate a:hover p{
+    font-size: 19px;
+    color: rgb(255, 98, 0);
+    font-weight: 800;
+}
+
+
+
+/* popular */
+
+.popular{
+    margin-bottom: 60px;
+}
+
+.popular-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.popular-head h2{
+    font-family: "Playwrite GB S", cursive;
+}
+
+.popular-head a{
+    text-decoration: none;
+    color: rgb(255, 98, 0);
+    font-size: 17px;
+    position: relative;
+}
+
+.popular-head a::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    z-index: -1;
+    background-color: rgb(255, 98, 0);
+    transition: 0.3s;
+}
+
+.popular-head a:hover::after{
+    width: 100%;
+}
+
+.popular-body{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    row-gap: 60px;
+    flex-wrap: wrap;
+}
+
+.popular-body a{
+    color: black;
+}
+
+.pop{
+    position: relative;
+}
+
+.pop img{
+    width: 320px;
+    height: 280px;
+    border-radius: 15px;
+    aspect-ratio: 1;
+}
+.pop span{
+    display: flex;
+    column-gap: 5px;
+    align-items: center;
+    width: fit-content;
+    background: white;
+    padding: 3px 7px;
+    border-radius: 12px;
+    position: absolute;
+    top: 7px;
+    left: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: cursive;
+}
+
+.pop span i{
+    color: rgb(255, 179, 0);
+}
+
+.pop .heart-icon{
+    position: absolute;
+    top: 7px;
+    right: 10px;
+}
+
+.pop .heart-icon input{
+    display: none;
+}
+
+.pop .heart-icon label i{
+    color: lightgray;
+    font-size: 14px;
+    background: white;
+    border-radius: 50%;
+    padding: 9px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pop .heart-icon input:checked + label i{
+    color: red;
+}
+
+.description{
+    padding: 10px;
+    background: #f7f7f7;
+    border-radius: 15px;
+    position: absolute;
+    width: calc(100% - 20px);
+    top: 80%;
+    left: 0px;
+}
+
+.description h3{
+    font-family: serif;
+    font-size: 18px;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.description h3:last-of-type{
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.description p{
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+
+.description p i{
+    color: rgb(255, 98, 0);
+}
+
+
+/* Trending */
+
+.trending{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.trending a{
+    text-decoration: none;
+}
+
+.trend{
+    background-color: #f7f7f7;
+    display: flex;
+    width: 100%;
+    border-radius: 20px;
+    transition: 0.3s;
+    flex-wrap: wrap;
+}
+
+.trend:hover{
+    background-color: #e5e5e5;
+}
+
+.trend img{
+    width: 220px;
+    height: 135px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    aspect-ratio: 2;
+}
+
+.trend-body{
+    padding: 10px;
+    flex:1;
+}
+.trend-body h3{
+    color: black;
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-family: serif;
+    font-weight: 800;
+}
+
+.trend-body p{
+    color: black;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.trend-body p:last-of-type{
+    opacity: 0.5;
+}
+
+.trend-body p i{
+    color: rgb(255, 179, 0);
+}
+
+
+/* contact */
+
+.contact{
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.contact-head{
+    margin-bottom: 30px;
+}
+
+.contact-head h2{
+    font-family: 'Playwrite GB S';
+    margin-bottom: 10px;
+}
+
+.contact-head p{
+    font-size: 20px;
+    font-weight: 800;
+    opacity: 0.5;
+}
+
+.contact-body form{
+    display: flex;
+    flex-direction: column;
+    max-width: 45%;
+}
+
+.contact-body input{
+    margin-bottom: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+    font-family:'Playwrite GB S';
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.contact-body input:focus{
+    border-color: rgb(255, 98, 0);
+}
+
+.contact-body textarea{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+    font-family:'Playwrite GB S';
+    font-size: 13px;
+    resize: none;
+    height: 70px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.contact-body textarea:focus{
+    border-color: rgb(255, 98, 0);
+}
+
+.contact-body button{
+    padding: 7px;
+    color: white;
+    border-radius: 10px;
+    background-color: rgb(255, 98, 0);
+    font-weight: 800;
+    cursor: pointer;
+    border: 1px solid transparent;
+    font-size: 17px;
+    font-family: 'Playwrite GB S';
+    transition: 0.3s;
+}
+
+.contact-body button:hover{
+    border: 1px solid rgb(255, 98, 0);
+    background-color: white;
+    color: rgb(255, 98, 0);
+    
+}
+
+
+
+/* footer */
+footer{
+    background-color: rgb(255, 98, 0);
+    padding: 20px 20px 10px 20px;
+    position: relative;
+}
+
+footer::before{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    top: 83px;
+    left: 0;
+}
+
+.footer-top{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 15px;
+    margin-bottom: 40px;
+}
+
+.footer-top .footer-logo a{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-family: "Playwrite GB S", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+}
+
+.footer-top .footer-links{
+    display: flex;
+    align-items: center;
+    column-gap: 25px;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    padding-right:25px ;
+    position: relative;
+}
+
+.footer-top .footer-links a {
+    text-decoration: none;
+    width: fit-content;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-top .footer-links a i{
+    color: black;
+    background-color: white;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(0 3px 3px black);
+    transition: 0.3s;
+}
+
+.footer-top .footer-links .facebook i:hover{
+    color: white;
+    background-color: rgb(0 0 183);
+}
+
+ .footer-top .footer-links .twitter i:hover{
+    color: white;
+    background-color: black;
+}
+
+.footer-top .footer-links .instagram i:hover{
+    color: white;
+    background-color: rgb(255, 0, 43);
+}
+
+.footer-top .footer-links .linkedin i:hover{
+    color: white;
+    background-color: rgb(0, 0, 221);
+}
+
+/* 1 */
+
+.footer-top .footer-links .facebook + .title{
+    position: absolute;
+    top: 0px;
+    left: -30px;
+    border-radius: 15px;
+    background-color: rgb(0 0 183);
+    color: white;
+    font-weight: 800;
+    font-family: monospace;
+    font-size: 15px;
+    padding: 7px 14px;
+    opacity: 0;
+    cursor: default;
+    transition: 0.4s;
+}
+
+.footer-top .footer-links .facebook:hover + .title{
+    top: -40px;
+    opacity: 1;
+}
+
+.facebook ~ .title-facearrow{
+    position: absolute;
+    top: 0;
+    left: 11px;
+    opacity: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 10px solid rgb(0 0 183);
+    transition: 0.5s;
+}
+
+.footer-top .footer-links .facebook:hover ~ .title-facearrow{
+    top: -11px;
+    opacity: 1;
+}
+
+
+/* 2 */
+
+.footer-top .footer-links .twitter + .title{
+    position: absolute;
+    top: -5px;
+    left: 35px;
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+    font-weight: 800;
+    font-family: monospace;
+    font-size: 15px;
+    padding: 7px 14px;
+    opacity: 0;
+    cursor: default;
+    transition: 0.4s;
+}
+
+.footer-top .footer-links .twitter:hover + .title{
+    top: -40px;
+    opacity: 1;
+}
+
+.twitter ~ .title-twitarrow{
+    position: absolute;
+    top: 0;
+    left: 71px;
+    opacity: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 10px solid black;
+    transition: 0.5s;
+}
+
+.footer-top .footer-links .twitter:hover ~ .title-twitarrow{
+    top: -11px;
+    opacity: 1;
+}
+
+
+/* 3 */
+
+.footer-top .footer-links .instagram + .title{
+    position: absolute;
+    top: -5px;
+    left: 88px;
+    border-radius: 15px;
+    background-color: rgb(255, 0, 43);
+    color: white;
+    font-weight: 800;
+    font-family: monospace;
+    font-size: 15px;
+    padding: 7px 14px;
+    opacity: 0;
+    cursor: default;
+    transition: 0.4s;
+}
+
+.footer-top .footer-links .instagram:hover + .title{
+    top: -40px;
+    opacity: 1;
+}
+
+.instagram ~ .title-instaarrow{
+    position: absolute;
+    top: 0;
+    left: 131px;
+    opacity: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 10px solid rgb(255, 0, 43);
+    transition: 0.5s;
+}
+
+.footer-top .footer-links .instagram:hover ~ .title-instaarrow{
+    top: -11px;
+    opacity: 1;
+}
+
+
+/* 4 */
+
+.footer-top .footer-links .linkedin + .title{
+    position: absolute;
+    top: 0px;
+    left: 144px;
+    border-radius: 15px;
+    background-color: rgb(0 0 183);
+    color: white;
+    font-weight: 800;
+    font-family: monospace;
+    font-size: 15px;
+    padding: 7px 14px;
+    opacity: 0;
+    cursor: default;
+    width: 31%;
+    transition: 0.4s;
+}
+
+.footer-top .footer-links .linkedin:hover + .title{
+    top: -40px;
+    opacity: 1;
+}
+
+.linkedin ~ .title-linkedarrow{
+    position: absolute;
+    top: 0;
+    left: 191px;
+    opacity: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 10px solid rgb(0 0 183);
+    transition: 0.5s;
+}
+
+.footer-top .footer-links .linkedin:hover ~ .title-linkedarrow{
+    top: -11px;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+/* footer-bottom */
+.footer-bottom{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 13px;
+}
+
+.footer-bottom div{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    flex: 1;
+}
+
+.footer-bottom div h3{
+    font-size: 21px;
+    font-weight: 800;
+    color: white;
+    position: relative;
+    margin-bottom: 17px;
+    width: fit-content;
+}
+
+.footer-bottom div h3::after{
+    content: "";
+    display: block;
+    width: 50%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    top: 115%;
+    left: 0;
+    border-radius: 15px;
+}
+
+.footer-bottom div ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+}
+
+.footer-bottom div ul a{
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-bottom div ul a::after{
+    content: "";
+    display: block;
+    width: 0%;
+    height: 1px;
+    background-color: white;
+    position: absolute;
+    top: 105%;
+    left: 0;
+    transition: 0.4s;
+}
+
+.footer-bottom div ul a:hover::after{
+    width: 100%;
+}
+
+
+.footer-footer{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    margin-top: 25px;
+    flex-wrap: wrap;
+    row-gap: 10px;
+}
+
+
+@media(max-width: 426px){
+    .up{
+        position: relative;
+    }
+    .up .makeaccount{
+        display: none;
+    }
+
+    .up .menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        row-gap: 5px;
+    }
+
+    .menu input[type="checkbox"]{
+        display: none;
+    }
+
+    .menu button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        row-gap: 5px;
+        background-color: transparent;
+        border: none;
+    }
+
+    .menu button label{
+        width: 30px;
+        height: 2px;
+        background-color: white;
+    }
+
+    .menu-body{
+        position: absolute;
+        top: 110%;
+        left: 21%;
+        background: white;
+        width: 280px;
+        height: 90px;
+        z-index: 1;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        transition: 0.3s;
+    }
+
+    .menu-body{
+        display: none;
+    }
+
+    .menu input[type="checkbox"]:checked ~ .menu-body{
+        display: flex;
+    }
+
+    .menu-search{
+        display: flex;
+        margin-bottom: 15px;
+    }
+
+    .menu-body .menu-search input{
+        padding: 7px 10px;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        outline: none;
+        border: 1px solid gray;
+        border-right: none;
+        width: 80%;
+        transition: 0.3s;
+    }
+
+    .menu-body .menu-search input:focus{
+        border-color:rgb(255, 98, 0) ;
+    }
+
+    .menu-body .menu-search button{
+        width: 20%;
+        background: rgb(255, 98, 0);
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        color: white;
+    }
+
+    .menu-button{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .menu-button a{
+        text-decoration: none;
+        color: black;
+        font-family: 'Playwrite GB S';
+        font-size: 15px;
+        font-weight: 800;
+        transition: 0.3s;
+    }
+
+    .menu-button a:hover{
+        color: rgb(255, 98, 0);
+    }
+
+    .menu-button .cart a{
+        position: relative;
+    }
+
+    .menu-button .cart a{
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .menu-button .cart a span {
+        position: absolute;
+        top: -7px;
+        left: 70%;
+        color: white;
+        font-size: 9px;
+        font-weight: 800;
+        font-family: "Playwrite GB S", cursive;
+        background-color: black;
+        width: 15px;
+        height: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+    }
+
+    section{
+        padding: 30px 0;
+    }
+
+    .trend img{
+        width: 100%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 0;
+    }
+
+    .popular-head{
+        padding: 0 20px;
+    }
+
+    .category{
+        padding: 0 20px;
+    }
+    
+    .contact-body form{
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 376px){
+    section{
+        padding: 30px 0;
+    }
+
+    footer::before{
+        top: 125px;
+    }
+    .footer-top{
+        justify-content: center;
+    }
+    .footer-top .footer-links{
+        padding-right: 7px;
+    }
+
+    .trend img{
+        width: 100%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 0;
+        object-fit: fill;
+    }
+
+    .contact-body form{
+        max-width: 100%;
+    }
+
+    .popular-head{
+        padding: 0 15px;
+    }
+
+    .category{
+        padding: 0 15px;
+    }
+
+    .menu-body{
+        left: 7%;
+    }
+}
+
+
+
+@media (max-width: 321px){
+    .popular-body{
+        padding: 20px 0;
+    }
+
+    .menu-body{
+        left: -7%;
+    }
+}

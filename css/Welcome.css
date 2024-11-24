@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html , body{
+    width: 100%;
+    height: auto;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+    background-color: white;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 98, 0);
+}
+
+.container{
+    position: relative;
+}
+
+.bg img{
+    width: 100%;
+}
+
+.start{
+    position: absolute;
+    top: 75%;
+    left: 0;
+    height: 38%;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0px -10px 5px white,
+    0px -20px 10px white,
+    0px -30px 15px rgba(255, 255, 255, 0.562);
+}
+
+.start p {
+    color: black;
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+    font-family: math;
+}
+
+.start p span{
+    color: rgb(255, 98, 0);
+}
+
+.start .second-p{
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 18px;
+    opacity: 0.5;
+    text-transform: capitalize;
+}
+
+.lets{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 17px;
+}
+
+.lets a{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(255, 98, 0);
+    border: 1px solid transparent;
+    padding: 15px 30px;
+    font-family: math;
+    font-weight: 800;
+    font-size: 18px;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.lets #l-a:hover{
+    background-color: rgba(255, 98, 0, 0.826);
+    border-color:rgb(255, 98, 0) ;
+    color: rgb(255, 98, 0);
+    background-color: white;
+}
+
+.lets p {
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+.lets p a{
+    background: none;
+    color: rgb(255, 98, 0);
+    padding: 0;
+    margin-left: 5px;
+    font-weight: 500;
+    position: relative;
+}
+
+.lets p a::after{
+    content: "";
+    display: block;
+    width: 0px;
+    height: 2px;
+    background-color: rgb(255, 98, 0);
+    position: absolute;
+    left: 0;
+    top: 115%;
+    transition: 0.4s;
+}
+
+.lets p a:hover::after{
+    width: 100%;
+}
+
+
+@media only screen and (max-width: 769px){
+    .start p{
+        font-size: 30px;
+    }
+    .start .second-p{
+        font-size: 15px;
+    }
+    .lets a{
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+    .lets p{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 426px){
+    .start p{
+        font-size: 25px;
+    }
+    .start .second-p{
+        font-size: 11px;
+    }
+    .lets a{
+        font-size: 12px;
+        padding: 10px 20px;
+    }
+    .lets p{
+        font-size: 13px;
+    }
+    .start{
+        height: auto;
+        top: 80%;
+    }
+}

@@ -1,0 +1,1022 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* font-family: "Playwrite GB S", cursive; */
+}
+
+
+html , body{
+    width: 100%;
+    height: auto;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+    background-color: white;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 98, 0);
+}
+
+nav{
+    background: rgb(255, 98, 0);
+    padding: 10px 30px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+nav .up{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.up .logo{
+    width: auto;
+}
+
+nav .logo a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-family: "Playwrite GB S", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+}
+
+
+.search{
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.search input{
+    padding: 4px 6px;
+    outline: none;
+    border-radius: 10px 0 0 10px;
+    border: none;
+    font-size: 12px;
+    font-family: 'Playwrite GB S';
+    text-transform: capitalize;
+    width: 80%;
+}
+
+.search button{
+    padding: calc(4px - 1.2px);
+    width: 20%;
+    cursor: pointer;
+    color: white;
+    border-radius: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: rgb(255, 98, 0);
+    border: 2px solid white;
+    font-weight: 800;
+}
+
+.search button:hover{
+    background-color: rgb(222, 85, 0);
+}
+
+.up .makeaccount{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 15px;
+    padding-right: 5px;
+    width: 45%;
+}
+
+
+nav .up .makeaccount .myaccount{
+    margin: 0 20px;
+}
+
+nav .up .makeaccount .myaccount a{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+}
+
+nav .up .makeaccount .myaccount a i{
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav .up .makeaccount .myaccount a:hover i{
+    color: white;
+}
+
+nav .up .makeaccount .myaccount a h3{
+    font-family: 'Playwrite GB S';
+    font-size: 13px;
+    margin-top: 3px;
+    font-weight: 800;
+    opacity: 1;
+    color: black;
+    transition: 0.3s;
+}
+
+nav .up .makeaccount .myaccount a:hover h3{
+    color: white;
+    opacity: 1;
+}
+
+nav .up .makeaccount .cart{
+    position: relative;
+}
+
+nav .up .makeaccount .cart i{
+    color: white;
+    cursor: pointer;
+}
+
+nav .up .makeaccount .cart span{
+    position: absolute;
+    top: -7px;
+    left: 70%;
+    color: white;
+    font-size: 9px;
+    font-weight: 800;
+    font-family: "Playwrite GB S", cursive;
+    background-color: black;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+nav .menu{
+    display: none;
+}
+
+/* end nav */
+
+section{
+    margin: 45px 0 60px  0;
+    padding: 0 30px;
+}
+
+.item{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.item .left{
+    width: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.item .left .img{
+    position: relative;
+    height: fit-content;
+    padding: 5px;
+}
+
+.item .left img{
+    object-fit: contain;
+    max-width: 100%;
+}
+
+.item .left .love{
+    width: fit-content;
+    position: absolute;
+    top: 15px;
+    left: 84%;
+}
+
+.item .left .love input{
+    display: none;
+}
+
+.item .left .img .share{
+    width: fit-content;
+    position: absolute;
+    top: 14px;
+    left: 91%;
+}
+
+.item .left .img .share input{
+    display: none;
+}
+
+.item .left .img .share button{
+    border: none;
+    outline: none;
+    background: white;
+    border-radius: 50%;
+    padding: 6px 8px;
+    font-size: 14px;
+}
+
+.item .left .love label i{
+    background-color: white;
+    padding: 6px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.item .left .love input:checked ~ label i{
+    color: red;
+}
+
+
+.item .right{
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item .right .head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.item .right .head h3{
+    font-size: 17px;
+    opacity: 0.5;
+    font-family: monospace;
+    font-weight: 500;
+}
+
+.item .right .head span{
+    display: flex;
+    column-gap: 5px;
+    align-items: center;
+}
+
+.item .right .head span i{
+    color: rgb(255 200 0); 
+}
+
+.item .right .title{
+    margin-bottom: 15px;
+}
+
+.item .right .description h3{
+    font-size: 17px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.item .right .description p{
+    opacity: 0.7;
+}
+
+.item .right .details{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.det1{
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    border: 1px solid lightgray;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.det1 i{
+    color: rgb(255, 98, 0);
+    background-color: #efefef;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.det1 span h4{
+    font-weight: 500;
+}
+
+.det1 span p{
+    font-weight: 800;
+    color: rgb(255, 98, 0);
+}
+
+.right .size{
+    margin-bottom: 20px;
+}
+
+.right .size h3{
+    margin-bottom: 10px;
+    font-size: 17px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.right .size div{
+    display: flex;
+    align-items: center;
+    column-gap:7px ;
+    flex-wrap: wrap;
+}
+
+.right .size div input[type="radio"]{
+    margin-right: 5px;
+    width: 15px;
+    height: 15px;
+    accent-color: rgb(255, 98, 0);
+}
+
+.right .size div label:first-of-type{
+    margin-right: 20px;
+}
+
+.right .price{
+    margin-bottom: 15px;
+}
+
+.right .price h3 span{ 
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.right .add button{
+    width: 100%;
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 20px;
+    font-family: math;
+    background-color: rgb(255, 98, 0);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.right .add button:hover{
+    background-color: rgb(222, 85, 0);
+}
+
+
+/* suggestions */
+
+.suggestions{
+    margin-top: 60px;
+}
+
+.suggestions h2{
+    font-size: 23px;
+    font-family: 'Playwrite GB S';
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+.sug{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:15px ;
+    padding: 15px;
+    flex-wrap: wrap;
+}
+
+.sugg{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 280px;
+}
+
+.sugg a{
+    text-decoration: none;
+    transition: 0.4s;
+}
+
+.sugg a .img{
+    width: 100%;
+    height: fit-content;
+}
+
+.sugg a .img img{
+    width: 280px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.sugg a .info{
+    background-color: #eeeeee;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sugg a .info h2{   
+    font-size: 22px;
+    font-family: emoji;
+    font-weight: 800;
+    margin-bottom: 8px;
+    color: black;
+}
+
+.sugg a .info p{
+    font-size: 19px;
+    font-family: math;
+    font-weight: 500;
+    color: black;
+    margin: 12px 0;
+}
+
+.sugg a .info button{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 20px;
+    font-family: math;
+    background-color: rgb(255, 98, 0);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sugg a .info button:hover{
+    background-color: rgb(222, 85, 0);
+}
+
+
+
+/* footer */
+
+footer{
+    background-color: rgb(255, 98, 0);
+    padding: 20px 20px 10px 20px;
+    position: relative;
+}
+
+footer::before{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    top: 83px;
+    left: 0;
+}
+
+.footer-top{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 15px;
+    margin-bottom: 40px;
+}
+
+.footer-top .footer-logo a{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-family: "Playwrite GB S", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+}
+
+.footer-top .footer-links{
+    display: flex;
+    align-items: center;
+    column-gap: 25px;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    padding-right:25px ;
+    position: relative;
+}
+
+.footer-top .footer-links a {
+    text-decoration: none;
+    width: fit-content;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-top .footer-links a i{
+    color: black;
+    background-color: white;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(0 3px 3px black);
+    transition: 0.3s;
+}
+
+.footer-top .footer-links .facebook i:hover{
+    color: white;
+    background-color: rgb(0 0 183);
+}
+
+ .footer-top .footer-links .twitter i:hover{
+    color: white;
+    background-color: black;
+}
+
+.footer-top .footer-links .instagram i:hover{
+    color: white;
+    background-color: rgb(255, 0, 43);
+}
+
+.footer-top .footer-links .linkedin i:hover{
+    color: white;
+    background-color: rgb(0, 0, 221);
+}
+
+/* 1 */
+
+.footer-top .footer-links .facebook + .title{
+    position: absolute;
+    top: 0px;
+    left: -30px;
+    border-radius: 15px;
+    background-color: rgb(0 0 183);
+    color: white;
+    font-weight: 800;
+    font-family: monospace;
+    font-size: 15px;
+    padding: 7px 14px;
+    opacity: 0;
+    cursor: default;
+    transition: 0.4s;
+}
+
+.footer-top .footer-links .facebook:hover + .title{
+    top: -40px;
+    opacity: 1;
+}
+
+.facebook ~ .title-facearrow{
+    position: absolute;
+    top: 0;
+    left: 11px;
+    opacity: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 10px solid rgb(0 0 183);
+    transition: 0.5s;
+}
+
+.footer-top .footer-links .facebook:hover ~ .title-facearrow{
+    top: -11px;
+    opacity: 1;
+}
+
+
+/* 2 */
+
+.footer-top .footer-links .twitter + .title{
+    position: absolute;
+    top: -5px;
+    left: 35px;
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+    font-weight: 800;
+    font-family: monospace;
+    font-size: 15px;
+    padding: 7px 14px;
+    opacity: 0;
+    cursor: default;
+    transition: 0.4s;
+}
+
+.footer-top .footer-links .twitter:hover + .title{
+    top: -40px;
+    opacity: 1;
+}
+
+.twitter ~ .title-twitarrow{
+    position: absolute;
+    top: 0;
+    left: 71px;
+    opacity: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 10px solid black;
+    transition: 0.5s;
+}
+
+.footer-top .footer-links .twitter:hover ~ .title-twitarrow{
+    top: -11px;
+    opacity: 1;
+}
+
+
+/* 3 */
+
+.footer-top .footer-links .instagram + .title{
+    position: absolute;
+    top: -5px;
+    left: 88px;
+    border-radius: 15px;
+    background-color: rgb(255, 0, 43);
+    color: white;
+    font-weight: 800;
+    font-family: monospace;
+    font-size: 15px;
+    padding: 7px 14px;
+    opacity: 0;
+    cursor: default;
+    transition: 0.4s;
+}
+
+.footer-top .footer-links .instagram:hover + .title{
+    top: -40px;
+    opacity: 1;
+}
+
+.instagram ~ .title-instaarrow{
+    position: absolute;
+    top: 0;
+    left: 131px;
+    opacity: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 10px solid rgb(255, 0, 43);
+    transition: 0.5s;
+}
+
+.footer-top .footer-links .instagram:hover ~ .title-instaarrow{
+    top: -11px;
+    opacity: 1;
+}
+
+
+/* 4 */
+
+.footer-top .footer-links .linkedin + .title{
+    position: absolute;
+    top: 0px;
+    left: 144px;
+    border-radius: 15px;
+    background-color: rgb(0 0 183);
+    color: white;
+    font-weight: 800;
+    font-family: monospace;
+    font-size: 15px;
+    padding: 7px 14px;
+    opacity: 0;
+    cursor: default;
+    width: 31%;
+    transition: 0.4s;
+}
+
+.footer-top .footer-links .linkedin:hover + .title{
+    top: -40px;
+    opacity: 1;
+}
+
+.linkedin ~ .title-linkedarrow{
+    position: absolute;
+    top: 0;
+    left: 191px;
+    opacity: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 10px solid rgb(0 0 183);
+    transition: 0.5s;
+}
+
+.footer-top .footer-links .linkedin:hover ~ .title-linkedarrow{
+    top: -11px;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+/* footer-bottom */
+.footer-bottom{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 13px;
+}
+
+.footer-bottom div{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    flex: 1;
+}
+
+.footer-bottom div h3{
+    font-size: 21px;
+    font-weight: 800;
+    color: white;
+    position: relative;
+    margin-bottom: 17px;
+    width: fit-content;
+}
+
+.footer-bottom div h3::after{
+    content: "";
+    display: block;
+    width: 50%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    top: 115%;
+    left: 0;
+    border-radius: 15px;
+}
+
+.footer-bottom div ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+}
+
+.footer-bottom div ul a{
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-bottom div ul a::after{
+    content: "";
+    display: block;
+    width: 0%;
+    height: 1px;
+    background-color: white;
+    position: absolute;
+    top: 105%;
+    left: 0;
+    transition: 0.4s;
+}
+
+.footer-bottom div ul a:hover::after{
+    width: 100%;
+}
+
+
+.footer-footer{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    margin-top: 25px;
+    flex-wrap: wrap;
+    row-gap: 10px;
+}
+
+
+@media(max-width: 426px){
+    .up{
+        position: relative;
+    }
+    .up .makeaccount{
+        display: none;
+    }
+
+    .up .menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        row-gap: 5px;
+    }
+
+    .menu input[type="checkbox"]{
+        display: none;
+    }
+
+    .menu button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        row-gap: 5px;
+        background-color: transparent;
+        border: none;
+    }
+
+    .menu button label{
+        width: 30px;
+        height: 2px;
+        background-color: white;
+    }
+
+    .menu-body{
+        position: absolute;
+        top: 110%;
+        left: 21%;
+        background: white;
+        width: 280px;
+        height: 90px;
+        z-index: 1;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        transition: 0.3s;
+    }
+
+    .menu-body{
+        display: none;
+    }
+
+    .menu input[type="checkbox"]:checked ~ .menu-body{
+        display: flex;
+    }
+
+    .menu-search{
+        display: flex;
+        margin-bottom: 15px;
+    }
+
+    .menu-body .menu-search input{
+        padding: 7px 10px;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        outline: none;
+        border: 1px solid gray;
+        border-right: none;
+        width: 80%;
+        transition: 0.3s;
+    }
+
+    .menu-body .menu-search input:focus{
+        border-color:rgb(255, 98, 0) ;
+    }
+
+    .menu-body .menu-search button{
+        width: 20%;
+        background: rgb(255, 98, 0);
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        color: white;
+    }
+
+    .menu-button{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .menu-button a{
+        text-decoration: none;
+        color: black;
+        font-family: 'Playwrite GB S';
+        font-size: 15px;
+        font-weight: 800;
+        transition: 0.3s;
+    }
+
+    .menu-button a:hover{
+        color: rgb(255, 98, 0);
+    }
+
+    .menu-button .cart a{
+        position: relative;
+    }
+
+    .menu-button .cart a{
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .menu-button .cart a span {
+        position: absolute;
+        top: -7px;
+        left: 70%;
+        color: white;
+        font-size: 9px;
+        font-weight: 800;
+        font-family: "Playwrite GB S", cursive;
+        background-color: black;
+        width: 15px;
+        height: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+    }
+
+    section{
+        padding: 30px 0;
+    }
+
+    .trend img{
+        width: 100%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 0;
+    }
+
+    .popular-head{
+        padding: 0 20px;
+    }
+
+    .category{
+        padding: 0 20px;
+    }
+    
+    .contact-body form{
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 376px){
+    section{
+        padding: 30px 0;
+    }
+
+    footer::before{
+        top: 125px;
+    }
+    .footer-top{
+        justify-content: center;
+    }
+    .footer-top .footer-links{
+        padding-right: 7px;
+    }
+
+    .trend img{
+        width: 100%;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 0;
+        object-fit: fill;
+    }
+
+    .contact-body form{
+        max-width: 100%;
+    }
+
+    .popular-head{
+        padding: 0 15px;
+    }
+
+    .category{
+        padding: 0 15px;
+    }
+
+    .menu-body{
+        left: 7%;
+    }
+
+    .item .left .love{
+        left: 81%;
+    }
+
+    .item .left .img .share{
+        left: 90%;
+    }
+}
+
+
+
+@media (max-width: 321px){
+    .popular-body{
+        padding: 20px 0;
+    }
+
+    .menu-body{
+        left: -7%;
+    }
+
+    .item .left .love{
+        left: 79%;
+    }
+
+    .item .left .img .share{
+        left: 89%;
+    }
+}
